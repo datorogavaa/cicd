@@ -1,0 +1,17 @@
+stages:
+  - build
+  - run
+
+build_job:
+  image: openjdk:21
+  stage: build
+  script:
+    - echo "Compiling Java program..."
+    - javac Main.java
+
+run_job:
+  image: openjdk:21
+  stage: run
+  script:
+    - echo "Running Java program..."
+    - java Hello
